@@ -3,7 +3,7 @@
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
-
+  <% if enhanced_cart.length > 0 %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -31,7 +31,6 @@
       </tfoot>
     </table>
   </div>
-
   <div class="row">
     <div class="col-xs-12">
       <%= form_tag orders_path do %>
@@ -48,5 +47,10 @@
       <% end %>
     </div>
   </div>
-
+  <% else %>
+    <div class="alert alert-danger">
+      <p>No product has been added</p>
+    </div>
+    <%= link_to "Back to shopping", controller: 'products' %>
+  <% end %>
 </section>
