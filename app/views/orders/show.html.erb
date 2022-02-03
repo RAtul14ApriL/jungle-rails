@@ -3,11 +3,11 @@
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
   </header>
-
-  <div class="order-summary jumbotron">
+    <div class="order-summary jumbotron">
+    <div>Customer Email: <%= @order.email %></div>
+    <%= render 'item' %>
     <h4>Thank you for your order!</h4>
   </div>
-
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
 </section>
