@@ -15,3 +15,26 @@ body {
 form.button_to {
   display: inline;
 }
+
+.card-body {
+  background-color: #f5f5f5;
+  margin-top: 3em;
+  padding: 2em;
+  border-radius: 1em;
+  border: .125em solid #e3e3e3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-size: 5em;
+    margin-bottom: 0;
+    color: rgb(192, 25, 25);
+  }
+  h3 {
+    margin-top: 0;
+  }
+  .btn-lg {
+    margin-top: 2em;
+  }
+}
