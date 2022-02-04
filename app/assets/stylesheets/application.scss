@@ -2,6 +2,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;500;600;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&display=swap');
 
 // App
 @import "products";
@@ -9,15 +10,33 @@
 $primary-color: #C52F24;
 $dark: #a02017;
 $secondary-color: #cc483f;
+
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
+);
+
+$display-font-weight: 300;
+$display-line-height: $headings-line-height;
+
+$headings-font-family: 'Barlow', sans-serif;
 // Global
 body {
   padding-top: 70px;
+  font-family: $headings-font-family;
 }
 
 // Bootstrap adjustments
 form.button_to {
   display: inline;
 }
+
+
+
 
 .card-body {
   background-color: #f5f5f5;
