@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <% @categories.each do |category| %>
+        <div class="col">
+          <h3><%= category.name %></h3>
+        </div>
+    <% end %>
+    <div class="col">
+    <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
+  </div>
+  </div>
+</div>
