@@ -35,8 +35,10 @@ form.button_to {
   display: inline;
 }
 
-
-
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
 
 .card-body {
   background-color: #f5f5f5;
@@ -106,4 +108,23 @@ form.button_to {
     background-color: $secondary-color;
     border-color: $dark;
   }
+}
+
+.table-signup {
+  border: none;
+  tr{
+    padding-top: 1em;
+  }
+  td {
+    padding-right: 2em;
+  }
+  input {
+    margin: 1em 0;
+    width: 15em;
+  }
+}
+
+.panel {
+  padding: 2em;
+  display: flex;
 }
