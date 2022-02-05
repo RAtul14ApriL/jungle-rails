@@ -1,19 +1,25 @@
 <h1>Signup</h1>
 
 <div class="panel panel-default products">
-  <%# <table class="table-signup">
-    <tbody> %>
 
-<%= form_for :user, url: '/users' do |f| %>
-<div class="form-group">
-  <p>First Name: <%= f.text_field :first_name %></p><br>
-  <p>Last Name: <%= f.text_field :last_name %></p><br>
-  <p>Email: <%= f.text_field :email %></p><br>
-  <p>Password: <%= f.password_field :password %></p><br>
-  <p>Password Confirmation: <%= f.password_field :password_confirmation %></p><br>
-  <%= f.submit "Submit" %>
-</div>
+  <%= form_for :user, url: '/users' do |f| %>
+  <div class="mb-3">
+    <p>First Name: <%= f.text_field :first_name, class: "form-control" %></p><br>
+  </div>
+  <div class="mb-3">
+    <p>Last Name: <%= f.text_field :last_name, class: "form-control" %></p><br>
+  </div>
+  <div class="mb-3">
+    <p>Email: <%= f.text_field :email, class: "form-control" %></p><br>
+  </div>
+  <div class="mb-3">
+    <p>Password: <%= f.password_field :password, class: "form-control" %></p><br>
+  </div>
+  <div class="mb-3">
+    <p>Password Confirmation: <%= f.password_field :password_confirmation, class: "form-control" %></p><br>
+  </div>
+    <%= f.submit "Submit", class: "btn btn-primary" %><br><br>
+    <p>Already have an account? Login <%= link_to 'here', [:login] %></p>
 <% end %>
-    <%# </tbody>
-  </table> %>
+
 </div>

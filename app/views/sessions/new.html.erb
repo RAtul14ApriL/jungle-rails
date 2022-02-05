@@ -3,11 +3,15 @@
 <div class="panel panel-default products">
 
 <%= form_tag '/login' do %>
-<div class="form-group">
+<div class="mb-3">
   <p>Email: <%= text_field_tag :email %></p><br>
-  <p>Password: <%= password_field_tag :password %></p><br>
-  <%= submit_tag "Submit" %>
 </div>
+<div class="mb-3">
+  <p>Password: <%= password_field_tag :password %></p><br>
+</div>
+  <%= submit_tag "Submit", class: "btn btn-primary" %>
+  <br><br>
+  <p>Don't have an account? Signup <%= link_to 'here', [:signup] %></p>
 <% end %>
   
 </div>

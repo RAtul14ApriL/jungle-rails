@@ -40,6 +40,14 @@ form.button_to {
   align-items: center;
 }
 
+.login-signup {
+  display: flex;
+  justify-content: end;
+  a {
+    margin-left: 1em;
+  }
+}
+
 .card-body {
   background-color: #f5f5f5;
   margin-top: 3em;
