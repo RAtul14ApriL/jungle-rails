@@ -7,4 +7,8 @@ class Product < ActiveRecord::Base
 
   validates :name, :price, :quantity, :category, presence: true
 
+  def stock_out?
+    quantity == 0
+  end
+
 end

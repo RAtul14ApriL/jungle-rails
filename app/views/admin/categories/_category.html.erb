@@ -3,10 +3,10 @@
     <% @categories.each do |category| %>
         <div class="col">
           <h3><%= category.name %></h3>
+          <h4><%= category.products_by_category(category.id) %> Product(s)</h4>
         </div>
     <% end %>
     <div class="col">
-    <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
   </div>
   </div>
 </div>

@@ -2,6 +2,10 @@
 
   <header class="page-header">
     <h1>Categories</h1>
+    <div class="admin-buttons">
+      <%= link_to 'Dashboard', [:admin, :root], class: 'btn btn-info' %>
+      <%= link_to 'Products', [:admin, :products], class: 'btn btn-info' %>
+    </div>
   </header>
   <%= render 'category' %>
 
