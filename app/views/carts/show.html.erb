@@ -53,7 +53,7 @@
           data-name="Jungle"
           data-description="Guest's Jungle Order"
           data-locale="auto"
-          data-email="Guest"
+          data-email="no@email.needed"
           data-currency="cad">
         </script>
         <% end %>
@@ -62,7 +62,7 @@
   </div>
   <% else %>
     <div class="alert alert-danger">
-      <p>No product has been added</p>
+      <p>Please add products to the cart to proceed to checkout.</p>
     </div>
     <%= link_to "Back to shopping", controller: 'products' %>
   <% end %>
