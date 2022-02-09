@@ -16,4 +16,24 @@ class User < ActiveRecord::Base
       nil
     end
   end
+
+  # def existing_email?(email)
+  #   emails = User.select('email').from('users')
+  #   if emails.include?(email)
+  #     p "#{email}"
+  #     true
+  #   else
+  #     false
+  #   end
+  # end
+
+  def user_with_same_email(email)
+    user = User.find_by_email(email.strip.downcase)
+    if user
+      true
+    else
+      false
+    end
+  end
+
 end
