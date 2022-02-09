@@ -6,4 +6,10 @@ class Admin::DashboardController < ApplicationController
     @product_count = Product.count
     @category_count = Category.count
   end
+
+  def destroy
+    request.headers['Authorization'] = nil
+    # p request.headers['Authorization']
+    redirect_to '/'
+  end
 end

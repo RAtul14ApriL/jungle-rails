@@ -2,19 +2,10 @@
 
 <div class="panel panel-default products">
   <%= form_tag '/login' do %>
-    <% if @errors.length != 0 %>
+    <% if flash[:alert] != nil  %>
       <div class="alert alert-danger">
-        <strong>The following errors prevented creating:</strong>
-          <ul>
-          <% @errors.each do |error| %>
-            <li><%= error %></li>
-          <% end %>
-          </ul>
-      </div>
-    <% elsif @user.save %>
-      <div class="alert alert-success">
-        "User Created!"
-      </div>
+        <%= flash[:alert] %>
+      </div>      
     <% end %>
     <div class="mb-3">
       <p>Email:<br><%= text_field_tag :email %></p><br>
