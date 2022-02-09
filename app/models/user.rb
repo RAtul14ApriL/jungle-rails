@@ -3,10 +3,8 @@ class User < ActiveRecord::Base
   has_secure_password
 
   validates :password, :length => {:minimum => 8}
-  
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :email, presence: true
+  validates :first_name, :last_name, :email, presence: true
+  validates :email, uniqueness: true
 
   def self.authenticate_with_credentials(email, password)
     user = User.find_by_email(email.strip.downcase)
@@ -17,13 +15,13 @@ class User < ActiveRecord::Base
     end
   end
 
-  def user_with_same_email(email)
-    user = User.find_by_email(email.strip.downcase)
-    if user
-      true
-    else
-      false
-    end
-  end
+  # def user_with_same_email(email)
+  #   user = User.find_by_email(email.strip.downcase)
+  #   if user
+  #     true
+  #   else
+  #     false
+  #   end
+  # end
 
 end

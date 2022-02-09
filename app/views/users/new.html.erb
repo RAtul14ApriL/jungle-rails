@@ -3,23 +3,35 @@
 <div class="panel panel-default products">
 
   <%= form_for :user, url: '/users' do |f| %>
-  <div class="mb-3">
-    <p>First Name: <%= f.text_field :first_name, class: "form-control" %></p><br>
-  </div>
-  <div class="mb-3">
-    <p>Last Name: <%= f.text_field :last_name, class: "form-control" %></p><br>
-  </div>
-  <div class="mb-3">
-    <p>Email: <%= f.text_field :email, class: "form-control" %></p><br>
-  </div>
-  <div class="mb-3">
-    <p>Password: <%= f.password_field :password, class: "form-control" %></p><br>
-  </div>
-  <div class="mb-3">
-    <p>Password Confirmation: <%= f.password_field :password_confirmation, class: "form-control" %></p><br>
-  </div>
-    <%= f.submit "Submit", class: "btn btn-primary" %><br><br>
-    <p>Already have an account? Login <%= link_to 'here', [:login] %></p>
-<% end %>
+  
+    <% if @errors.length != 0 %>
+      <div class="alert alert-danger">
+        <strong>The following errors prevented creating:</strong>
+          <ul>
+          <% @errors.each do |error| %>
+            <li><%= error %></li>
+          <% end %>
+          </ul>
+      </div>
+    <% end %>
+
+    <div class="mb-3">
+      <p>First Name: <%= f.text_field :first_name, class: "form-control" %></p><br>
+    </div>
+    <div class="mb-3">
+      <p>Last Name: <%= f.text_field :last_name, class: "form-control" %></p><br>
+    </div>
+    <div class="mb-3">
+      <p>Email: <%= f.text_field :email, class: "form-control" %></p><br>
+    </div>
+    <div class="mb-3">
+      <p>Password: <%= f.password_field :password, class: "form-control" %></p><br>
+    </div>
+    <div class="mb-3">
+      <p>Password Confirmation: <%= f.password_field :password_confirmation, class: "form-control" %></p><br>
+    </div>
+      <%= f.submit "Submit", class: "btn btn-primary" %><br><br>
+      <p>Already have an account? Login <%= link_to 'here', [:login] %></p>
+  <% end %>
 
 </div>
