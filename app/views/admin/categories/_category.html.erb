@@ -3,10 +3,12 @@
     <% @categories.each do |category| %>
         <div class="col">
           <h3><%= category.name %></h3>
-          <h4><%= category.products_by_category(category.id) %> Product(s)</h4>
+          <h4><%= category.products_by_category(category.id) %> Product(s)</h4><br/>
+          <%= link_to fa_icon('trash'), [:admin, category], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
         </div>
     <% end %>
     <div class="col">
-  </div>
+      <%= link_to '+ New Category', new_admin_category_path, class: 'btn btn-info' %>
+    </div>
   </div>
 </div>

@@ -6,7 +6,7 @@
   
     <% if @errors.length != 0 %>
       <div class="alert alert-danger">
-        <strong>The following errors prevented creating:</strong>
+        <strong>ERROR while signup:</strong>
           <ul>
           <% @errors.each do |error| %>
             <li><%= error %></li>
